@@ -1,3 +1,17 @@
 #question-holder {
     height: 70vh;
 }
+
+.hide {
+    visibility: hidden;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.results {
+    font-size: x-large;
+}
