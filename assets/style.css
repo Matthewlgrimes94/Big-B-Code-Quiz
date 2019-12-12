@@ -12,6 +12,6 @@
     font-size: large;
 }
 
-.results {
+.results, .message, .recordKeeper {
     font-size: x-large;
 }

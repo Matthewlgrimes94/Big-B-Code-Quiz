@@ -1,12 +1,3 @@
-//Dom elements
-var qHolderEl = $('#question-holder');
-var startEl = $('#start');
-var counterEl = $('#counterEl');
-var navEl = $('#nav-btns');
-var scoreEl = $('#scoreEl');
-var counter = 60;
-var score = 0;
-
 var questions = [
     {
         title: "What does DOM stand for?",
@@ -24,15 +15,26 @@ var questions = [
         answer: "grapes"
     }
 ]
+
+//Dom elements
+var qHolderEl = $('#question-holder');
+var startEl = $('#start');
+var counterEl = $('#counterEl');
+var navEl = $('#nav-btns');
+var scoreEl = $('#scoreEl');
+var counter = (questions.length) * 15
+var score = 0;
 var currentPage = 0;
 var totalPages = questions.length;
+var quizFinished = false;
 
 startEl.click(function() {
+    timer();
     startQuiz();
-})
+}); 
 
 qHolderEl.on('click','button', function() {
-    var result = $('<p>');
+    var result = $('<p class="text-center message"></p>');
     if (($(event.target).attr('data-selection') === questions[currentPage].answer)) {
         result.addClass('text-success');
         result.text('Correct!');
@@ -41,22 +43,40 @@ qHolderEl.on('click','button', function() {
         score++
         currentPage ++
         renderQuestions();
-        },2000);
+        },1200);
     } if (($(event.target).attr('data-selection') !== questions[currentPage].answer)) {
         result.addClass('text-danger');
         result.text('Incorrect!');
         qHolderEl.append(result);
+        counter -= 5;
+        animateSubtraction(counterEl)
         setTimeout(function() {
         currentPage ++
         renderQuestions();
-        },2000);
+        },1200);
 }
 });
+
+function timer() {
+    counterEl.text(`Time: ${counter}`);
+    var timer = setInterval(function() {
+        counter --
+        counterEl.text(`Time: ${counter}`);
+        if (counter <= 0) {
+            clearInterval(timer);
+                qHolderEl.empty();
+                var gameOver = $('<div class="text-center results"></div>');
+                gameOver.text('GAME OVER');
+                qHolderEl.append(gameOver);
+        } if (quizFinished === true) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
 
 function startQuiz () {
     startEl.addClass('hide');
     renderQuestions();
-
 }
 
 function renderQuestions () {
@@ -78,7 +98,17 @@ function renderQuestions () {
 }
 
 function endQuiz() {
+    quizFinished = true;
     var quizResults = $('<div class="text-center results"></div>');
     quizResults.text(`Your Score is ${score}/${totalPages}`);
     qHolderEl.append(quizResults);
+}
+
+function animateSubtraction (x) {
+    x.addClass('text-danger');
+    x.text(`Time: ${counter} -5`);
+        setTimeout(function () {
+            x.removeClass('text-danger');
+            x.text(`Time: ${counter}`);
+        },800);
 }
