@@ -12,7 +12,7 @@ This is my super great code quiz. It times you, checks your answers, and even le
 
 <---------------------------------------------------------------------------------------------------------->
 # Link to the site
-![Website](https://matthewlgrimes94.github.io/Big-B-Code-Quiz/)
+https://matthewlgrimes94.github.io/Big-B-Code-Quiz/
 <---------------------------------------------------------------------------------------------------------->
 
 # Screenshots
