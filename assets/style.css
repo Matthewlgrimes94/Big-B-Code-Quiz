@@ -3,7 +3,7 @@
 }
 
 .hide {
-    visibility: hidden;
+    display: none !important;
 }
 
 .title {
@@ -14,4 +14,12 @@
 
 .results, .message, .recordKeeper {
     font-size: x-large;
+}
+
+#start {
+    font-size: xx-large;
+}
+
+.nameInput {
+    margin-bottom: 20px;
 }
