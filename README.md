@@ -17,9 +17,9 @@ This is my super great code quiz. It times you, checks your answers, and even le
 
 # Screenshots
 ![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(16).png)
-![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(17.png)
-![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(18.png)
-![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(19.png)
+![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(17).png)
+![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(18).png)
+![Screenshot](https://github.com/Matthewlgrimes94/Code-quiz/blob/master/assets/screenshots/Screenshot%20(19).png)
 
 <---------------------------------------------------------------------------------------------------------->
 
